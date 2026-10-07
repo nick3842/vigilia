@@ -1,0 +1,42 @@
+*vigilia.txt*  A dark theme: candlelight over a northern night
+
+VIGILIA                                                    *vigilia*
+
+Requires Neovim 0.9 or newer. No plugin dependencies.
+
+USAGE                                                      *vigilia-usage*
+>
+    :colorscheme vigilia
+<
+CONFIGURATION                                              *vigilia-setup*
+
+Call setup before loading the colorscheme:
+>
+    require("vigilia").setup({
+      transparent = false,
+      italic_comments = true,
+    })
+    vim.cmd.colorscheme("vigilia")
+<
+transparent         Remove editor, gutter, float and sidebar backgrounds.
+                    Menus and highlighted surfaces keep their backgrounds.
+italic_comments     Render comments in italics.
+
+Each setup call resets omitted options to their defaults. Reload the
+colorscheme after changing options. setup() alone does not apply highlights.
+
+PALETTE                                                    *vigilia-palette*
+>
+    local palette = require("vigilia").palette
+<
+INTEGRATIONS                                               *vigilia-integrations*
+
+Treesitter, LSP semantic tokens and diagnostics, GitSigns, Telescope,
+Neo-tree, nvim-tree, nvim-cmp, and which-key highlight groups are included.
+Integrations do not require additional configuration.
+
+LICENSE                                                    *vigilia-license*
+
+MIT. Copyright (c) 2026 Nick Stuart. See LICENSE in the repository.
+
+vim:tw=78:ts=8:noet:ft=help:norl:

@@ -1,0 +1,18 @@
+name: Test
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        neovim: [v0.9.5, stable]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: rhysd/action-setup-vim@v1
+        with:
+          version: ${{ matrix.neovim }}
+          neovim: true
+      - run: nvim --headless -u NONE -i NONE -c "lua dofile('nvim/tests/smoke.lua')"
+      - run: python3 -m json.tool omp/vigilia.json > /dev/null
