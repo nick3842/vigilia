@@ -1,8 +1,8 @@
 # Vigilia
 
-*Vigilia*, Latin for "night watch" and the vigil kept before a feast, is a dark color theme of candlelight over a northern night: midnight navy, winter cream, gold, fjord blue and restrained rose.
+*Vigilia*, Latin for "night watch" and the vigil kept before a feast, is a dark color theme of candlelight over a northern night: midnight navy, winter cream, gold, fjord blue, lichen green, vestment violet, ember and restrained rose.
 
-The color hierarchy follows Catppuccin's soft-contrast approach but uses a different palette. Comments use a brighter steel blue (`#607588`) for readability.
+The color hierarchy follows Catppuccin's soft-contrast approach but uses a different palette. Each common syntax role gets its own hue, accents sit at the same lightness as the text so they read as peers, and comments use a brighter steel blue (`#73899D`) for readability.
 
 | Target | Path |
 | --- | --- |
@@ -17,17 +17,16 @@ The color hierarchy follows Catppuccin's soft-contrast approach but uses a diffe
 | --- | --- |
 | Background | `#151E2C` |
 | Surface | `#172333` |
-| Text | `#F1EEE6` |
+| Text | `#DDD9CF` |
 | Muted text | `#99A9B6` |
-| Parameters | `#EAA7BB` |
-| Properties | `#A5BCFF` |
-| Comments | `#607588` |
+| Comments | `#73899D` |
 | Keywords | `#F2CC70` |
+| Strings | `#9ED99F` |
 | Functions | `#70CEE0` |
-| Types | `#A5BCFF` |
-| JSX attributes | `#91BFF2` |
-| Strings | `#EBD391` |
-| Constants | `#EAA7BB` |
+| Types, modules | `#CBA9F3` |
+| Properties | `#A5BCFF` |
+| Parameters | `#EAA7BB` |
+| Numbers, constants, built-ins | `#F5AB77` |
 | Special accent | `#F0A0B5` |
 
 ## Neovim
