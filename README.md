@@ -22,7 +22,7 @@ The color hierarchy follows Catppuccin's soft-contrast approach but uses a diffe
 | Comments | `#73899D` |
 | Keywords | `#F2CC70` |
 | Strings | `#9ED99F` |
-| Functions | `#70CEE0` |
+| Functions | `#85C7D7` |
 | Types, modules | `#CBA9F3` |
 | Properties | `#A5BCFF` |
 | Parameters | `#EAA7BB` |

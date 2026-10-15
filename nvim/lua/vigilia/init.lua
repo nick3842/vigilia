@@ -19,7 +19,7 @@ M.palette = {
   silver    = "#C4CED8",
   cream     = "#DDD9CF",
   gold      = "#F2CC70",
-  fjord     = "#70CEE0",
+  fjord     = "#85C7D7",
   rose      = "#F0A0B5",
   pale_rose = "#EAA7BB",
   pale_blue = "#A5BCFF",
@@ -101,7 +101,7 @@ local function highlights(c)
     Keyword = { fg = c.gold },
     Exception = { fg = c.rose },
     PreProc = { fg = c.fjord },
-    Include = { fg = c.fjord },
+    Include = { fg = c.gold },
     Define = { fg = c.fjord },
     Macro = { fg = c.violet },
     PreCondit = { fg = c.fjord },
@@ -153,7 +153,7 @@ local function highlights(c)
     ["@keyword.function"] = { fg = c.gold },
     ["@keyword.operator"] = { fg = c.gold },
     ["@keyword.return"] = { fg = c.gold },
-    ["@keyword.import"] = { fg = c.fjord },
+    ["@keyword.import"] = { fg = c.gold },
     ["@keyword.conditional"] = { fg = c.gold },
     ["@keyword.repeat"] = { fg = c.gold },
     ["@keyword.exception"] = { fg = c.rose },
@@ -237,10 +237,12 @@ local function highlights(c)
     ["@lsp.type.interface"] = { fg = c.violet },
     ["@lsp.type.struct"] = { fg = c.violet },
     ["@lsp.type.parameter"] = { fg = c.pale_rose },
-    ["@lsp.type.variable"] = { fg = c.cream },
+    -- Cleared so treesitter's finer captures win: builtins, decorators and
+    -- members stay distinct instead of being repainted once the LSP attaches.
+    ["@lsp.type.variable"] = {},
     ["@lsp.type.property"] = { fg = c.pale_blue },
-    ["@lsp.type.function"] = { fg = c.fjord },
-    ["@lsp.type.method"] = { fg = c.fjord },
+    ["@lsp.type.function"] = {},
+    ["@lsp.type.method"] = {},
     ["@lsp.type.keyword"] = { fg = c.gold },
     ["@lsp.type.comment"] = vim.tbl_extend("force", { fg = c.comment }, comment_style),
   }
@@ -260,7 +262,7 @@ function M.load()
   local c = M.palette
   local terminal = {
     c.steel, c.red, c.lichen, c.gold, c.pale_blue, c.violet, c.fjord, c.cream,
-    c.comment, "#E38187", "#B6EBB6", "#FFE08F", "#BAD0FF", "#DDBEFF", "#8EE0F0", "#FFFDF7",
+    c.comment, "#E38187", "#B6EBB6", "#FFE08F", "#BAD0FF", "#DDBEFF", "#9ED9E8", "#FFFDF7",
   }
   for i, color in ipairs(terminal) do
     vim.g["terminal_color_" .. (i - 1)] = color

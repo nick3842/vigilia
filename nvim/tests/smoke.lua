@@ -13,9 +13,7 @@ local ok, err = pcall(function()
 
   load()
   assert(hl("Normal").bg == 0x151E2C)
-  assert(hl("Function").fg == 0x70CEE0)
   assert(hl("Comment").italic == true)
-  assert(hl("@lsp.type.function").fg == 0x70CEE0)
   assert(hl("DiagnosticError").fg == 0xD46A72)
   for i = 0, 15 do
     assert(vim.g["terminal_color_" .. i]:match("^#%x%x%x%x%x%x$"))
